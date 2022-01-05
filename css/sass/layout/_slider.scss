@@ -1,0 +1,50 @@
+.testimonials{
+    @extend %sec-padding;
+    z-index: 2;
+    @include bImage("../../../images/header_bg.jpeg");
+    background-attachment: fixed;
+    min-height: 400px;
+    .overlay{
+        @include overlay(#000000, 0.7)
+    }
+    .carousel{
+        .carousel-inner{
+            .carousel-item{
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+                h4{
+                    color: white;
+                }
+                p{
+                    color: #eee
+                }
+            }
+        }
+        .carousel-indicators{
+            bottom: -100px;
+            @include responsive(mobile){
+                bottom: -70px;
+            }
+            button{
+                width: 40px;
+                height: 40px;
+                border: 2px solid white;
+                transition: $mainTransition;
+                &:nth-of-type(1){
+                    @include bImage("../../../images/team1.jpg")
+                }
+                &:nth-of-type(2){
+                    @include bImage("../../../images/team2.jpg")
+                }
+                &:nth-of-type(3){
+                    @include bImage("../../../images/team3.jpg")
+                }
+                &.active{
+                    border: 2px solid $mainColor;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+%centering{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+%sec-padding{
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+%line{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: $mainColor;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s ease-in-out;
+}
+%paragraph{
+    color: #777;
+    line-height:$lineHeight;
+}
+%box-shadow{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}

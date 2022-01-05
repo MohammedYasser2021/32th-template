@@ -1,0 +1,51 @@
+// background-image
+@mixin bImage($image){
+    background-image: url($image);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+// overlay 
+@mixin overlay($color, $opacity) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+    z-index: -1;
+}
+
+// media query 
+@mixin responsive($media){
+    @if $media == mobile{
+        @media (max-width: 575px){
+            @content;
+        }
+    }@else if $media == small {
+        @media (max-width: 767px){
+            @content;
+        }
+    }@else if $media == medium {
+        @media (max-width: 991px){
+            @content;
+        }
+    }@else if $media == large {
+        @media (max-width: 1199px){
+            @content;
+        }
+    }
+    @else if $media == xlarge {
+        @media (min-width: 1200px){
+            @content;
+        }
+    }
+}
+
+// prefixer 
+@mixin prefixer($property, $values...) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, "" {
+      #{$prefix}#{$property}: $values;
+    }
+  }

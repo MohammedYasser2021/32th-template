@@ -1,0 +1,35 @@
+.contact-us{
+    .box{
+        @extend %box-shadow;
+        i{
+            width: 70px;
+            height: 70px;
+            border-color: #aaa !important
+        }
+    }
+    form{
+        textarea{
+            height: 120px;
+            resize: none;
+            &::placeholder{
+                transition: 0.5s ease-in-out;
+            }
+            &:focus::placeholder{
+                opacity: 0;
+            }
+        }
+        input{
+            &::placeholder{
+                transition: 0.5s ease-in-out;
+            }
+            &:focus::placeholder{
+                opacity: 0;
+            }
+        }
+        button{
+            @include responsive(small){
+                width: 100%;
+            }
+        }
+    }
+}

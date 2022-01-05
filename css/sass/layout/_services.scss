@@ -1,0 +1,8 @@
+.services{
+    .box{
+        @extend %box-shadow;
+        p{
+            @extend %paragraph
+        }
+    }
+}

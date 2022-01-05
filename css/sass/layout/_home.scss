@@ -1,0 +1,34 @@
+.home{
+    @include bImage("../../../images/header_bg.jpg");
+    z-index: 1;
+    .overlay{
+        @include overlay(#000000, 0.7);
+    }
+    .home-content{
+        @extend %centering;
+        p{
+            color: #eee;
+            line-height: $lineHeight;
+        }
+        @include responsive(small){
+            width: 90%
+        }
+        .btn{
+            @include responsive(mobile){
+                width: 80%
+            }
+        }
+    }
+}
+.modal{
+    object{
+        height: 85vh;
+    }
+    &.fade .modal-dialog{
+        transition: $mainTransition ease-in-out;
+        transform: scale(0);
+    }
+    &.show .modal-dialog{
+        transform: none;
+    }
+}

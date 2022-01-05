@@ -1,0 +1,36 @@
+.navbar{
+    .navbar-toggler{
+        &:focus{
+            box-shadow: none !important;
+        }
+    }
+    .nav-link{
+        position: relative;
+        &::after{
+            @extend %line;
+            width: 0;
+        }
+        &:hover, &.active{
+            color: $mainColor !important;
+        }
+        &:hover::after, &.active::after{
+            width: 100%
+        }
+    }
+    .dropdown{
+        .dropdown-toggle{
+            &::after{
+                border: 0 !important
+            }
+        }
+        .dropdown-menu{
+            @media (min-width: 992px) {
+                width: 250px
+            }
+            .dropdown-item{
+                color: white;
+                padding: 10px 20px;
+            }
+        }
+    }
+}

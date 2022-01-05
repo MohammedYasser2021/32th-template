@@ -1,0 +1,31 @@
+.about{
+    overflow: hidden;
+    .about-image{
+        img{
+            @include responsive(xlarge){
+                height: 360px;
+            }
+        }
+    }
+    .about-info{
+        ul{
+            li{
+                .about-info-icon{
+                    i{
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+                .about-desc{
+                    h6{
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                    p{
+                        color: $secondaryColor
+                    }
+                }
+            }
+        }
+    }
+}
